@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apollo Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="font-sans text-gray-800">
+
+<header class="w-full bg-white shadow-sm fixed top-0 left-0 z-50">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <a href="#" class="flex items-center space-x-2">
+      <img src="assets/icons/logo.png" alt="Apollo Logo" class="w-28 object-contain" />
+    </a>
+
+    <ul class="hidden md:flex space-x-10 text-gray-800 font-medium">
+      <li><a href="#" class="hover:text-blue-600 transition">Home</a></li>
+      <li><a href="#" class="hover:text-blue-600 transition">Features</a></li>
+    </ul>
+
+    <div class="hidden md:flex items-center space-x-4">
+      <a href="#" class="border border-blue-500 text-blue-600 px-5 py-2 rounded-lg hover:bg-blue-50 transition">Sign In</a>
+      <a href="#" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">Sign Up</a>
+    </div>
+
+    <button id="menu-btn" class="md:hidden focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </nav>
+
+  <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center space-y-4 py-4 bg-white shadow-lg">
+    <a href="#" class="text-gray-800 font-medium">Home</a>
+    <a href="#" class="text-gray-800 font-medium">Features</a>
+    <div class="flex space-x-4">
+      <a href="#" class="border border-blue-500 text-blue-600 px-4 py-2 rounded-lg">Sign In</a>
+      <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg">Sign Up</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+    <section class="pt-28 pb-16 bg-white">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center px-6 gap-10">
+        <div class="md:w-1/2">
+          <h1 class="text-4xl md:text-5xl font-bold text-blue-600 leading-tight mb-4">
+            LEARN, BUILD, & SHOWCASE <br />ALL IN ONE PLATFORM
+          </h1>
+          <p class="text-gray-700 mb-6">
+            APOLLO is the Advanced Programming and Online Learning Laboratory that combines LMS, Project Management, and Portfolio in a seamless ecosystem.
+            Learn new skills, collaborate on real projects, and showcase your achievements—all within one integrated platform.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button class="bg-blue-600 text-white px-5 py-3 rounded-md hover:bg-blue-700">Get Started for Free</button>
+            <button class="border border-blue-500 text-blue-500 px-5 py-3 rounded-md hover:bg-blue-50">Explore Features</button>
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <img src="assets/icons/rocket.png" alt="Hero Illustration" class="w-96 md:w-[420px]" />
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-indigo-50 py-16">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-4 text-gray-900">What You’ll Get With Apollo</h2>
+        <p class="text-gray-600 mb-12">A powerful ecosystem designed to help you learn faster, build smarter, and showcase better.</p>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition">
+            <img src="assets/icons/lms.png" alt="LMS Icon" class="w-12 mx-auto mb-4" />
+            <h3 class="font-semibold text-lg mb-2">Learning Management System</h3>
+            <p class="text-gray-600 text-sm">
+              Master programming skills with structured modules, interactive lessons, quizzes, and coding challenges.
+            </p>
+          </div>
+          <!-- Card 2 -->
+          <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition">
+            <img src="assets/icons/project.png" alt="Project Icon" class="w-12 mx-auto mb-4" />
+            <h3 class="font-semibold text-lg mb-2">Project Management</h3>
+            <p class="text-gray-600 text-sm">
+              Turn your knowledge into real experience. Collaborate with teammates, manage tasks, and track progress.
+            </p>
+          </div>
+          <!-- Card 3 -->
+          <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition">
+            <img src="assets/icons/portfolio.png" alt="Portfolio Icon" class="w-12 mx-auto mb-4" />
+            <h3 class="font-semibold text-lg mb-2">Portfolio Management</h3>
+            <p class="text-gray-600 text-sm">
+              Showcase your best work in one place and share your achievements with recruiters, peers, and the world.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-blue-50 py-16 text-center">
+      <div class="max-w-3xl mx-auto px-6">
+        <img src="assets/icons/rocket.png" alt="Rocket Icon" class="w-10 mx-auto mb-4" />
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to Launch Your Journey?</h2>
+        <p class="text-gray-700 mb-6">
+          Join Apollo today and experience the all-in-one ecosystem to learn programming, build real projects, and showcase your portfolio.
+        </p>
+        <button class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700">Get Started Free</button>
+      </div>
+    </section>
+
+    <footer class="bg-[#0f1629] text-gray-300 py-12">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+        <!-- Left -->
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <img src="assets/icons/logo.png" alt="Logo" class="w-8 h-8" />
+            <span class="text-xl font-semibold text-white">APOLLO</span>
+          </div>
+          <p class="text-sm mb-4">Advanced Programming and Online Learning Laboratory</p>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-center space-x-2">
+              <span>📞</span><span>+62 1234 5678 9101</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <span>✉️</span><span>apollo@apollo.com</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <span>📍</span><span>Kampus 4 Universitas Ahmad Dahlan</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-white">Home</a></li>
+            <li><a href="#" class="hover:text-white">Features</a></li>
+            <li><a href="#" class="hover:text-white">How it works</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-white font-semibold mb-4">Resources</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-white">Support</a></li>
+            <li><a href="#" class="hover:text-white">Privacy policy</a></li>
+            <li><a href="#" class="hover:text-white">Terms of use</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm">
+        ©2025 APOLLO – All rights reserved
+      </div>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
+
+  </body>
+</html>
